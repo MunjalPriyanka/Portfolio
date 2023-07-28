@@ -1,18 +1,23 @@
 header {
-  height: 100%;
+  height: 100vh;
   padding-top: 7rem;
   overflow: hidden;
+  background-color: var(--color-bg-variant); /* Add a background color or image */
 }
 
 .header__container {
   text-align: center;
   height: 100%;
   position: relative;
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 6rem; /* Add padding for better spacing */
 }
 
 .cta {
   display: flex;
   justify-content: center;
+  align-items: center; /* Vertically center the CTA buttons */
   gap: 1.2rem;
   margin-top: 2.5rem;
 }
@@ -23,13 +28,14 @@ header {
   align-items: center;
   gap: 0.8rem;
   position: absolute;
-  left: 5rem;
+  left: 2rem;
   bottom: 1rem;
+  color: var(--color-primary); /* Add color for social links */
 }
 
 .header__socials::after {
   content: '';
-  width: 1px;
+  width: 2px; /* Increase the width of the vertical line */
   height: 2rem;
   background: var(--color-primary);
 }
@@ -39,26 +45,22 @@ header {
   right: 5rem;
   bottom: 5rem;
   transform: rotate(90deg);
-  font-weight: 300;
-  font-size: 0.9rem;
+  font-weight: 500; /* Increase font weight for better visibility */
+  font-size: 1rem; /* Increase font size for better visibility */
 }
 
-@media screen and (max-width: 1024px){
+/* Media Queries */
+@media screen and (max-width: 1024px) {
   header {
     height: 68vh;
   }
-
-  section {
-    margin-top: 6rem;
-  }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   header {
     height: 100vh;
   }
 
-  .header__socials,
   .scroll__down {
     display: none;
   }
