@@ -5,20 +5,37 @@ import { BiBook } from 'react-icons/bi';
 import { RiServiceLine } from 'react-icons/ri';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 
-
 import './topbar.css';
 
 const Topbar = () => {
-  const [activeNav, setActiveNav] = useState('#home');
+  const [activeNav, setActiveNav] = useState('home');
+
+  const navigationItems = [
+    { id: 'home', icon: <AiOutlineHome />, label: 'Home' },
+    { id: 'about', icon: <AiOutlineUser />, label: 'About' },
+    { id: 'publication', icon: <RiServiceLine />, label: 'Publication' },
+    { id: 'courses', icon: <BiBook />, label: 'Courses' },
+    { id: 'contact', icon: <BiMessageSquareDetail />, label: 'Contact' },
+  ];
+
+  const handleNavItemClick = (itemId) => {
+    setActiveNav(itemId);
+  };
+
   return (
-    <nav>
-      <a href="#home" onClick={()=> setActiveNav('#home')} className={activeNav === '#home' ? 'active' : ''}><AiOutlineHome /></a>
-      <a href="#about" onClick={()=> setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser /></a>
-      <a href="#publication" onClick={()=> setActiveNav('#publication')} className={activeNav === '#publication' ? 'active' : ''}><RiServiceLine /></a>
-      <a href="#courses" onClick={()=> setActiveNav('#courses')} className={activeNav === '#courses' ? 'active' : ''}><BiBook /></a>
-      <a href="#contact" onClick={()=> setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
+    <nav className="topbar">
+      {navigationItems.map((item) => (
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          onClick={() => handleNavItemClick(item.id)}
+          className={activeNav === item.id ? 'active' : ''}
+        >
+          {item.icon}
+        </a>
+      ))}
     </nav>
-  )
-}
+  );
+};
 
 export default Topbar;
