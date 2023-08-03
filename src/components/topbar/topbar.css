@@ -1,33 +1,67 @@
+/* Navigation */
 nav {
-  background: rgba(0, 0, 0, 0.3);
-  width: max-content;
-  display: block;
-  padding: 0.7rem 1.7rem;
-  z-index: 2;
   position: fixed;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 2rem;
+  z-index: 2;
+  padding: 0.7rem 1.7rem;
   display: flex;
   gap: 0.8rem;
   border-radius: 3rem;
+  background: rgba(0, 0, 0, 0.6); /* Increase background opacity for better contrast */
   backdrop-filter: blur(15px);
+  width: max-content;
 }
 
 nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   padding: 0.9rem;
   border-radius: 50%;
-  display: flex;
-  color: var(--color-light);
-  font-size: 1.1rem;
+  color: var(--color-white); /* Use white color for better visibility */
+  font-size: 1.2rem; /* Slightly increase the font size */
+  transition: background-color 0.3s; /* Add a smooth transition for hover effect */
 }
 
 nav a:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7); /* Increase background opacity on hover */
 }
 
 nav a.active {
-  background: var(--color-bg);
+  background: var(--color-primary); /* Use the primary color for active link */
+  color: var(--color-bg); /* Use the background color for text on active link */
+}
+
+/* Social Icons in Header */
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 2rem; /* Adjust the position slightly */
+  bottom: 1.5rem; /* Adjust the position slightly */
   color: var(--color-white);
 }
+
+.header__socials::after {
+  content: '';
+  width: 1px;
+  height: 2.5rem; /* Increase the height of the vertical line */
+  background: var(--color-primary);
+}
+
+/* Scroll Down Indicator */
+.scroll__down {
+  position: absolute;
+  right: 2rem; /* Adjust the position slightly */
+  bottom: 2rem; /* Adjust the position slightly */
+  transform: rotate(90deg);
+  font-weight: 500;
+  font-size: 1rem; /* Increase the font size slightly */
+  color: var(--color-primary); /* Use the primary color for better visibility */
+}
+
+/* Rest of the code remains unchanged */

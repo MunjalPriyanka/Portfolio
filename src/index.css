@@ -1,5 +1,7 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap');
 
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@
   text-decoration: none;
 }
 
+/* Variables */
 :root {
+  /* Colors */
   --color-bg: #02021e;
   --color-bg-variant: #2c2c6c;
   --color-primary: #0095ff;
@@ -18,13 +22,16 @@
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
+  /* Transitions */
   --transition: all 400ms ease;
 
+  /* Container Widths */
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
 }
 
+/* General Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -46,6 +53,7 @@ body {
   margin: 0 auto;
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -59,6 +67,7 @@ h1 {
   font-size: 2.5rem;
 }
 
+/* Sections */
 section {
   margin-top: 8rem;
 }
@@ -74,34 +83,25 @@ section > h2 {
   margin-bottom: 3rem;
 }
 
-.text-light {
-  color: var(--color-primary)
-}
-
+/* Links */
+.text-light,
 a {
   transition: var(--transition);
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 a:hover {
   color: var(--color-white);
 }
 
+/* Buttons */
 .btn {
-  width: max-content;
   display: inline-block;
-  color: var(--color-primary);
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
   transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  /* Additional styles can be added here */
 }
 
 .btn-primary {
@@ -109,12 +109,19 @@ a:hover {
   color: var(--color-bg);
 }
 
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+}
+
+/* Images */
 img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1024px){
   .container {
     width: var(--container-width-md);

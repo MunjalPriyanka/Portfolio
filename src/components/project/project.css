@@ -1,11 +1,11 @@
 /* Publication Section */
-.publication__container {
+.project__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
   
-  .publication__item {
+  .project__item {
     background: var(--color-bg-variant);
     padding: 1.5rem; /* Adjust padding for better spacing */
     border-radius: 2rem;
@@ -17,48 +17,48 @@
     align-items: center; /* Center the content horizontally */
   }
   
-  .publication__item:hover {
+  .project__item:hover {
     border-color: var(--color-primary-variant);
     background: var(--color-bg); /* Change the background color on hover */
   }
   
-  .publication__item-image {
+  .project__item-image {
     border-radius: 1.5rem;
     overflow: hidden;
     height: 30%;
     width: 100%; /* Ensure the image takes full width of the container */
   }
   
-  .publication__item h3 {
+  .project__item h3 {
     margin: 1.5rem 0; /* Adjust margin for better spacing */
     font-size: 1.2rem; /* Increase font size for better readability */
   }
   
-  .publication__item p {
+  .project__item p {
     margin: 0; /* Remove bottom margin for better spacing */
     font-size: 1rem; /* Increase font size for better readability */
   }
   
-  .publication__item-cta {
+  .project__item-cta {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem; /* Adjust top margin for better spacing */
   }
   
-  .publication__item-content {
+  .project__item-content {
     height: 40%;
   }
   
   /* Media Queries */
   @media screen and (max-width: 1024px) {
-    .publication__container {
+    .project__container {
       grid-template-columns: 1fr 1fr; /* Adjust to two-column layout */
       gap: 1.2rem;
     }
   }
   
   @media screen and (max-width: 600px) {
-    .publication__container {
+    .project__container {
       grid-template-columns: 1fr; /* Adjust to single column layout */
       gap: 1rem;
     }

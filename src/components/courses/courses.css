@@ -1,9 +1,11 @@
+/* Courses Container */
 .container.courses__container {
     width: 40%;
     padding-bottom: 4rem;
-}
-
-.client__avatar {
+  }
+  
+  /* Client Avatar */
+  .client__avatar {
     width: 4rem;
     aspect-ratio: 1/1;
     overflow: hidden;
@@ -11,47 +13,52 @@
     margin: 0 auto 1rem;
     display: flex;
     justify-content: center;
-    align-content: center;
-}
-
-.client__avatar a {
+    align-items: center; /* Use align-items instead of align-content */
+  }
+  
+  .client__avatar a {
     font-size: 40px;
     aspect-ratio: 1/1;
-}
-
-
-.courses {
+  }
+  
+  /* Courses */
+  .courses {
     background: var(--color-bg-variant);
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
-}
-
-.client__review {
+  }
+  
+  /* Client Review */
+  .client__review {
     color: var(--color-light);
     font-weight: 300;
     display: block;
     width: 90%;
     margin: 0.8rem auto 0;
-}
-
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary);
-}
-
-@media screen and (max-width: 1024px){
-    .container.courses__container {
-        width: 60%;
-    }
-}
+  }
   
-@media screen and (max-width: 600px){
+  /* Swiper Pagination */
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    background: var(--color-primary);
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 1024px) {
     .container.courses__container {
-        width: var(--container-width-sm);
+      width: 60%;
     }
-
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container.courses__container {
+      width: var(--container-width-sm);
+      padding-bottom: 2rem; /* Adjust padding for better spacing on smaller screens */
+    }
+  
     .client__review {
-        width: var(--container-width-sm);
+      width: var(--container-width-sm);
     }
-}
+  }
+  
