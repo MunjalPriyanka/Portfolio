@@ -1,8 +1,9 @@
 /* Courses Container */
 .container.courses__container {
-    width: 40%;
-    padding-bottom: 4rem;
-  }
+  width: 40%;
+  padding-bottom: 4rem;
+}
+
   
   /* Client Avatar */
   .client__avatar {
@@ -18,7 +19,7 @@
   
   .client__avatar a {
     font-size: 40px;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; Remove this line */
   }
   
   /* Courses */
